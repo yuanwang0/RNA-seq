@@ -31,5 +31,8 @@ We use [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) for alignment and
 * Download the latest release of **Bowtie** from https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2/. Follow the instructions to install.
 * Download the latest release of **RSEM** from https://github.com/deweylab/RSEM/archive/v1.3.1.tar.gz. Follow the instructions to install.
 * Download and decompress the human genome file (FASTA) and annotation file (GTF):
+
 `wget ftp://ftp.ensembl.org/pub/release-83/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz`
+
 `wget ftp://ftp.ensembl.org/pub/release-83/gtf/homo_sapiens/Homo_sapiens.GRCh38.83.gtf.gz`
+
