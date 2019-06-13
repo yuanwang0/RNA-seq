@@ -1,7 +1,7 @@
 # RNA-seq
 
 ***
-## Overview
+## I. Overview
 
 Here we demonstrate how to convert raw `.fastq` files into quantified expression files for RNA-seq data.
 
@@ -21,7 +21,7 @@ Input     |    BAM       |  Aligned raw reads
 Output    |    TXT/TSV   |  Quantified expression value (TPM/FPKM)
 
 ***
-## Preparation
+## II. Preparation
 
 We use [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) for alignment and [RSEM](https://deweylab.github.io/RSEM/) for gene quantification. We use reference trancripts and gene annotations from **Ensembl**. Follow the following steps for setting up:
 
