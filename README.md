@@ -23,9 +23,9 @@ Output    |    TXT/TSV   |  Quantified expression value (TPM/FPKM)
 ***
 ## Preparation
 
-We use [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) for alignment and [RSEM](https://deweylab.github.io/RSEM/) for gene quantification. We use reference trancripts and gene annotations from *Ensembl*. Follow the following steps for setting up:
+We use [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml) for alignment and [RSEM](https://deweylab.github.io/RSEM/) for gene quantification. We use reference trancripts and gene annotations from **Ensembl**. Follow the following steps for setting up:
 
-* First, make sure C++, Perl, and R are installed. Also make sure to install perl-doc by command `apt-get install perl-doc`.
-* Download the latest release of Bowtie from https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2/. Follow the instructions to install.
-* Download the latest release of RSEM from https://github.com/deweylab/RSEM/archive/v1.3.1.tar.gz. Follow the instructions to install.
+* First, make sure C++, Perl, and R are installed. Also make sure to install `perl-doc` with command `apt-get install perl-doc`.
+* Download the latest release of **Bowtie** from https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2/. Follow the instructions to install.
+* Download the latest release of **RSEM** from https://github.com/deweylab/RSEM/archive/v1.3.1.tar.gz. Follow the instructions to install.
 * Download 
