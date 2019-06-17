@@ -40,9 +40,9 @@ RNA-seq
 Follow the following steps:
 
 * First, make sure C++, Perl, and R are installed. Also make sure to install `perl-doc` with command `apt-get install perl-doc`.
-* Download the latest release of **STAR** from https://github.com/alexdobin/STAR/archive/2.7.1a.tar.gz to `sw`. Follow the instructions to install.
-* Download the latest release of **RSEM** from https://github.com/deweylab/RSEM/archive/v1.3.1.tar.gz to `sw`. Follow the instructions to install.
-* Download and decompress the human genome file (FASTA) and annotation file (GTF) to `ref`:
+* Download the latest release of **STAR** from https://github.com/alexdobin/STAR/archive/2.7.1a.tar.gz to `sw/`. Follow the instructions to install.
+* Download the latest release of **RSEM** from https://github.com/deweylab/RSEM/archive/v1.3.1.tar.gz to `sw/`. Follow the instructions to install.
+* Download and decompress the human genome file (FASTA) and annotation file (GTF) to `ref/`:
 
 `ftp://ftp.ensembl.org/pub/release-83/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz`
 
