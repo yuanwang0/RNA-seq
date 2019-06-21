@@ -69,16 +69,48 @@ star_dir="/sw/STAR-2.7.1"
 ref_dir="/ref"
 
 ${RSEM_dir}/rsem-prepare-reference --gtf ${ref_dir}/Homo_sapiens.GRCh38.83.gtf \
-	                             --star \
-		                       --star-path ${star_dir} \
-		                       ${ref_dir}/Homo_sapiens.GRCh38.dna.primary_assembly.fa \
-		                       ${ref_dir}/human_ensembl
-
+                                   --star \
+				   --star-path ${star_dir} \
+				   ${ref_dir}/Homo_sapiens.GRCh38.dna.primary_assembly.fa \
+				   ${ref_dir}/human_ensembl
 ```
 
 #### Parameters explained
-* `--gtf`: Specifies that `${ref_dir}/Homo_sapiens.GRCh38.dna.primary_assembly.fa` is a genome sequence, hence will extract reference transcripts using gene annotation file `${ref_dir}/Homo_sapiens.GRCh38.83.gtf`.
+* `${ref_dir}/Homo_sapiens.GRCh38.dna.primary_assembly.fa`: *Argument 1*, reference_fasta_file(s)
+* `${ref_dir}/human_ensembl`: *Argument 2*, reference_prefix_name
+* `--gtf <file>`: Specifies that *Argument 1* is a genome sequence, hence will extract reference transcripts using gene annotation file `<file>`.
 * `--star`: Build STAR genome indexes.
 * `--star-path`: Path to STAR's executables.
-* `${ref_dir}/Homo_sapiens.GRCh38.dna.primary_assembly.fa`: Argument 1 *reference_fasta_file(s)*
-* `${ref_dir}/human_ensembl`: Argument 2 *reference_prefix_name*: 
+
+For a more detailed documentation of all parameters, please consult `rsem-prepare-reference --help`.
+
+***
+## III. RSEM - step 2: 
+
+Here we use the control sample `HH07` as an example. This data is **pair-end** and **non-strand specific**.
+
+*See here for some ways of guessing the strandedness of an RNA-seq library.*
+
+
+```
+#!/bin/bash
+
+RSEM_dir="/sw/RSEM-1.3.1"
+star_dir="/sw/STAR-2.7.1"
+ref_dir="/ref"
+out_dir="/out
+
+${RSEM_dir}/rsem-calculate-expression -p 1 \
+                                      --paired-end \
+				      --star \
+				      --star-path ${star_dir} \
+				      --estimate-rspd \
+				      --append-names \
+				      --output-genome-bam \
+				      --star-gzipped-read-file \
+				      ${data_dir}/HH07_1.fq.gz \
+				      ${data_dir}/HH07_2.fq.gz \
+				      ${ref_dir}/human_ensembl \
+				      ${out_dir}/control.HH07
+```
+
