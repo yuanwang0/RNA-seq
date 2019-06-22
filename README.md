@@ -156,14 +156,29 @@ RSEM_results=control.HH07.genes.results
 cut -f1,6 ${RSEM_results} | sed 's/^.*_//' | tail -n +2 > ${RSEM_results}.TPM.pcl
 ```
 
+We can take a look at the first 10 lines of the file:
+```
+$ head control.HH07.genes.results.TPM.pcl
+TSPAN6	13.05
+TNMD	0.00
+DPM1	74.15
+SCYL3	2.67
+C1orf112	12.63
+FGR	0.00
+CFH	4.08
+FUCA2	98.40
+GCLC	5.24
+NFYA	15.63
+```
+
 We have thus created a file `control.HH07.genes.results.TPM.pcl` that can be used as input for URSA(HD)!
 
 ***
 ## VI. References
 
-B. Li, C.N. Dewey. RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome. BMC Bioinform, 12 (1) (Dec. 2011), p. 323.
+Li B, Dewey CN. RSEM: accurate transcript quantification from RNA-Seq data with or without a reference genome. BMC Bioinform, 12 (1) (Dec. 2011), p. 323.
 
-A. Dobin, T.R. Gingeras. Mapping RNA-seq reads with STAR. Curr Protoc Bioinformatics, 51 (Sep. 2015), pp. 11.14.1-19
+Dobin A, Gingeras TR. Mapping RNA-seq reads with STAR. Curr Protoc Bioinformatics, 51 (Sep. 2015), pp. 11.14.1-19
 
 Lee YS, Krishnan A, Oughtred R, Rust J, Chang CS, Ryu J, Kristensen VN, Dolinski K, Theesfeld CL, Troyanskaya OG.
 A Computational Framework for Genome-wide Characterization of the Human Disease Landscape. Cell Systems, 8 (2) (Feb. 2019), p. 152-162.e6.
